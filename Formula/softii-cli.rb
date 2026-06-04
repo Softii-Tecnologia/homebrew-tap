@@ -1,7 +1,8 @@
 class SoftiiCli < Formula
   desc "Softii internal developer CLI — static IP proxy workflow and tooling"
   homepage "https://github.com/Softii-Tecnologia/softii-cli"
-  url "git@github.com:Softii-Tecnologia/softii-cli.git",
+  url "ssh://git@github.com/Softii-Tecnologia/softii-cli.git",
+      using: GitDownloadStrategy,
       tag:      "v0.1.2",
       revision: "e766b4fb451ff17339b7b0f0ae162114e54337b7"
   version "0.1.2"
