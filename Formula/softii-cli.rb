@@ -2,7 +2,7 @@ class SoftiiCli < Formula
   desc "Softii internal developer CLI — static IP proxy workflow and tooling"
   homepage "https://github.com/Softii-Tecnologia/softii-cli"
   url "https://github.com/Softii-Tecnologia/softii-cli/releases/download/v0.1.0/softii-cli-0.1.0.tgz"
-  sha256 "REPLACE_WITH_SHA256_AFTER_RELEASE"
+  sha256 "afaa2ea68bd7ae14775d15232563135df5dd3a20d57c1cd882d9a198346ef93c"
   license :cannot_represent
   head "https://github.com/Softii-Tecnologia/softii-cli.git", branch: "main"
 
