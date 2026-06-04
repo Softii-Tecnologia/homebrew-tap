@@ -2,21 +2,19 @@ class SoftiiCli < Formula
   desc "Softii internal developer CLI — static IP proxy workflow and tooling"
   homepage "https://github.com/Softii-Tecnologia/softii-cli"
   url "ssh://git@github.com/Softii-Tecnologia/softii-cli.git",
-      using: GitDownloadStrategy,
-      tag:      "v0.1.2",
-      revision: "e766b4fb451ff17339b7b0f0ae162114e54337b7"
-  version "0.1.2"
+      using:    GitDownloadStrategy,
+      tag:      "v0.1.3",
+      revision: "c55edc8e031b85d9c7968533c11e0ed8bc331da7"
+  version "0.1.3"
   license :cannot_represent
   head "git@github.com:Softii-Tecnologia/softii-cli.git", branch: "main"
 
   depends_on "node"
-  depends_on "yarn" => :build
 
   def install
-    system "yarn", "install", "--frozen-lockfile"
-    system "yarn", "build"
-
-    libexec.install Dir["*"]
+    # dist/index.js is a prebuilt bundle committed to the release tag.
+    # No yarn install or build step needed — all deps are inlined.
+    libexec.install "dist/index.js"
 
     (bin/"softii").write_env_script libexec/"dist/index.js",
       PATH: "#{Formula["node"].opt_bin}:$PATH"
