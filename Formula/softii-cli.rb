@@ -1,9 +1,9 @@
 class SoftiiCli < Formula
   desc "Softii internal developer CLI — static IP proxy workflow and tooling"
   homepage "https://github.com/Softii-Tecnologia/softii-cli"
-  url "https://raw.githubusercontent.com/Softii-Tecnologia/homebrew-tap/main/vendor/softii-cli/softii-cli-0.1.9.tar.gz"
-  sha256 "1be4d88df567241e459e895f7126d3189c64aed72b7d3a9907ddaec4815e8b72"
-  version "0.1.9"
+  url "https://raw.githubusercontent.com/Softii-Tecnologia/homebrew-tap/main/vendor/softii-cli/softii-cli-0.1.10.tar.gz"
+  sha256 "eaee20bf45cb6262f786dda2190632df7c7e263d2e683ec85a8dcc4e85c40bc7"
+  version "0.1.10"
   license :cannot_represent
 
   depends_on "node"
